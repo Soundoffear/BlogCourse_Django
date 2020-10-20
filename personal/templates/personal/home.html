@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+    {% for account in accounts %}
+
+	{% include 'personal/snippets/body_snippet.html' with value=account %}
+    
+    {% endfor %}
+
+{% endblock content %}
+
+
+
