@@ -6,38 +6,17 @@
 	<title>
 	    This is the page title
 	</title>
-	
-	{% if request.user.is_authenticated %}
-	    <p><a href="{% url 'home' %}">HOME</a> | <a href="{% url 'logout' %}">Logout</a></p>	    
-	    <p>Hello, {{request.user.username}}</p>
-	
-	{% else %}
-	    
-	    <p>
-		<a href="{% url 'home' %}">HOME</a> |
-		<a href="{% url 'register' %}">Register</a> | 
-		<a href="{% url 'login' %}">Login</a>
-	    </p> 
-	    
-	{% endif %}
 
-    <hr>
-    </head>
+	{% include 'snippets/header.html' %}
 
     <body>
 
 	{% block content %}
 
 	{% endblock content %}
-    
+   
+	{% include 'snippets/footer.html' %}
+
     </body>
-
-    <footer>
-	
-	<hr>
-	<p>Blog Course | 2020</p>
-
-    </footer>
-
 
 </html>
