@@ -1,4 +1,4 @@
-<!DOCTTYPE html>
+<!DOCTYPE html>
 
 <html>
 
@@ -9,14 +9,30 @@
 
 	{% include 'snippets/header.html' %}
 
+    </head>
+
     <body>
+	
+	<!-- Body -->
 
-	{% block content %}
+<style type="text/css">
+    .main{
+	min-height=100hv;
+	height=100%;
+    }
 
-	{% endblock content %}
-   
+</style>
+
+	<div>
+
+	    {% block content %}
+
+	    {% endblock content %}
+	
+	</div>
+
 	{% include 'snippets/footer.html' %}
-
+	<!-- End Body -->
     </body>
 
 </html>
