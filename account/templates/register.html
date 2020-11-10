@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
 
@@ -53,6 +54,11 @@
 
 </style>
 
+<div class='d-flex flex-column pb-3'>
+
+    <img class='img-fluid mx-auto d-block' src='{% static 'download.jpg' %}' alt='slon' width='72' height='72'>
+
+</div>
 
 <form class="form-signin" method="post"> {% csrf_token %}
 
