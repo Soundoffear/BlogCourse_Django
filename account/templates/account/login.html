@@ -40,18 +40,20 @@
 	border-top-left-radius: 0;
 	border-top-right-radius: 0;
     }
-
+    
+    .h3 {
+	text-align: center;
+    }
 
 </style>
-
-
-<form class="form-signin" method="post"> {% csrf_token %}
 
     <div class='d-flex flex-column pb-3'>
     
 	<img class='img-fluid mx-auto d-block' src="{% static 'download.jpg' %}" alt='slon' width='72' height='72'>
 
     </div>
+
+<form class="form-signin" method="post"> {% csrf_token %}
 
     <h1 class="h3 mb-3 font-weight-normal">Login</h1> 
     
