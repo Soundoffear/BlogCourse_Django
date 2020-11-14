@@ -9,7 +9,7 @@ from django.dispatch import receiver
 
 def upload_location(instance, file_name):
 
-    file_path = 'blog/{author_id}/{title}-{file_name}'.format(author_id = str(instance.author_id), title=str(instance.title), file_name=file_name)
+    file_path = 'blog/{author_id}/{title}-{file_name}'.format(author_id = str(instance.author.id), title=str(instance.title), file_name=file_name)
     
     return file_path
 
