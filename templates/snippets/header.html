@@ -19,6 +19,16 @@
 	min-width: 220px;
     }
 
+    .search-bar {
+	max-width: 500px;
+	width: 100%;
+    }
+
+    .form {
+	width: 100%;
+    }
+
+
 </style>
 
 <div class='d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm'>
@@ -28,7 +38,13 @@
 	    Hello, {{request.user.username}}
 	{% endif %}
     </h5>
-    
+
+    <div class='search-bar mt-sm-2 mr-2'>
+	<form method='get'>
+	    <input type='text' name='q' class='form-control' id='id_q' placeholder='Search...'>
+	</form>
+    </div>
+
     <nav class='my-2 my-md-0 mr-md-3'>
 
 	{% if request.user.is_authenticated %}
@@ -44,4 +60,9 @@
 	{% endif %}
 
     </nav>
+
+    <script type='text/javascript'>
+	document.getElementById('id_q').value = "{{query}}"
+    </script>
+
 </div>
